@@ -20,4 +20,4 @@ let myTodo ={
 
 myTodo.addMeeting(5)
 myTodo.meetingFinish(2)
-console.log(myTodo.summary())
+console.log(myTodo.summary());
