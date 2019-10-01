@@ -1,31 +1,30 @@
-let myTodos={
-    day: 'Monday',
-    meeting: 0,
-    meetdone:0
+let dailyTodos ={
+    day : 'TuesDay',
+    task : 0,
+    taskDone : 0
 }
 
-let addMeeting =function(todo, meet=0){
-    todo.meeting=todo.meeting+meet
+let taskTodo = function (task01, taskNum = 0) {
+    task01.task = task01.task+ taskNum
 }
 
-
-let meetingDone =function(todo, meet=0){
-    todo.meetdone=todo.meetdone+meet
+let taskFinish = function (task02, taskNum = 0) {
+     task02.taskDone = task02.taskDone +taskNum
 }
 
-
-let resetDay =function(todo){
-    todo.meeting=0
-    todo.meetdone=0
+let resetTask = function (taskReset) {
+    taskReset.task = 0,
+    taskReset.taskDone = 0
 }
 
-let summaryOfTheDay =function(todo){
-    let meetingLeft = todo.meeting-todo.meetdone
-    return `You have ${meetingLeft} meeting left`
+let getSummaryOfTheTask = function (totalTask) {
+    let taskLeft = totalTask.task - totalTask.taskDone
+    return `I have ${taskLeft} tasks left`
 }
 
-addMeeting(myTodos, 6)
-meetingDone(myTodos, 5)
-console.log(myTodos)
+taskTodo(dailyTodos, 5)
+taskFinish(dailyTodos, 2)
 
-console.log(summaryOfTheDay(myTodos))
+console.log(getSummaryOfTheTask(dailyTodos))
+
+resetTask(dailyTodos)
